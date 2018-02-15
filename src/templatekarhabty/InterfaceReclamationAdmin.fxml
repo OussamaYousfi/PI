@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.InterfaceReclamationAdminController">
+   <children>
+      <ImageView fitHeight="652.0" fitWidth="976.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="651.0" fitWidth="730.0" layoutX="115.0" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="209.0" prefHeight="17.0" prefWidth="214.0" text="List of Claims :" textFill="#790202" underline="true">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="Etatrec" layoutX="673.0" layoutY="227.0" opacity="0.5" prefWidth="150.0" />
+      <JFXButton fx:id="valider" layoutX="607.0" layoutY="227.0" onAction="#ValiderRec" text="Submit" textFill="#800808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="OuvrirReclamation" layoutX="863.0" layoutY="227.0" onAction="#OuvrirRec" prefHeight="25.0" prefWidth="72.0" text="Open" textFill="#830606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="supprimerReclamation" layoutX="873.0" layoutY="275.0" onAction="#SupprimerRec" text="Delete" textFill="#8d0707">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="IdReclamation" labelFloat="true" layoutX="128.0" layoutY="263.0" prefHeight="25.0" prefWidth="170.0" promptText="Search" unFocusColor="#860707" />
+      <TableView fx:id="TableReclamation" layoutX="128.0" layoutY="307.0" onMouseClicked="#onclick" prefHeight="296.0" prefWidth="693.0">
+        <columns>
+          <TableColumn fx:id="cNom" prefWidth="114.0" text="Client's first name" />
+          <TableColumn fx:id="cPrenom" prefWidth="112.0" text="Client's last name" />
+            <TableColumn fx:id="cSujet" prefWidth="77.0" text="Subject" />
+            <TableColumn fx:id="cDescription" prefWidth="105.0" text="Description" />
+            <TableColumn fx:id="Email" prefWidth="165.0" text="Mail" />
+            <TableColumn fx:id="cEtat" prefWidth="119.0" text="State" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="187.0" layoutY="97.0" onAction="#home" prefHeight="25.0" prefWidth="103.0" text="Home" />
+      <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="187.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/green-back-button-icon-65921.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

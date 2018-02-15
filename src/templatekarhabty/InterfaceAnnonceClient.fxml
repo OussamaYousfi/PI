@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="client" prefHeight="578.0" prefWidth="775.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.AnnoncesClientController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="727.0" fitWidth="1072.0" layoutX="-103.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="696.0" fitWidth="758.0" layoutX="-60.0" layoutY="-4.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="731.0" layoutY="14.0" opacity="0.67" pickOnBounds="true" preserveRatio="true" styleClass="profilepic">
+         <image>
+            <Image url="@../icons/avatar-159236_640.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="747.0" layoutY="169.0" prefHeight="25.0" prefWidth="145.0" text="       Upload picture" textFill="#1e1457">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="750.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icon-camera-128.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="716.0" layoutY="229.0" opacity="0.56" prefHeight="47.0" prefWidth="157.0" text="Welcome " textFill="#f20404">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="322.0" opacity="0.56" text="First name :" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="717.0" layoutY="360.0" opacity="0.56" text="Last name :" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="729.0" layoutY="400.0" opacity="0.56" text="Mail :" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="701.0" layoutY="442.0" opacity="0.56" text="Phone number :" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="871.0" layoutY="236.0" prefHeight="34.0" prefWidth="98.0" text="Label" />
+      <Label layoutX="852.0" layoutY="323.0" prefHeight="17.0" prefWidth="56.0" text="Label" />
+      <Label layoutX="809.0" layoutY="361.0" prefHeight="17.0" prefWidth="69.0" text="Label" />
+      <Label layoutX="775.0" layoutY="401.0" prefHeight="17.0" prefWidth="129.0" text="Label" />
+      <Label layoutX="813.0" layoutY="443.0" prefHeight="17.0" prefWidth="78.0" text="Label" />
+      <JFXButton fx:id="Show_all" layoutX="24.0" layoutY="232.0" onAction="#show_butt" opacity="0.56" prefHeight="28.0" prefWidth="145.0" text="Show All Annoucment" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="AddAnn" layoutX="169.0" layoutY="229.0" onAction="#onclickaddAnn" opacity="0.56" prefHeight="34.0" prefWidth="129.0" text="Add Annoucment" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="table_view_list" layoutX="36.0" layoutY="283.0" onMouseClicked="#mouse_clicked" prefHeight="290.0" prefWidth="599.0">
+        <columns>
+          <TableColumn fx:id="title_column" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="category_column" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="city_column" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="Date_column" prefWidth="50.0" text="Date" />
+            <TableColumn fx:id="region_column" prefWidth="69.0" text="Region" />
+            <TableColumn fx:id="type_column" prefWidth="60.0" text="Type" />
+            <TableColumn fx:id="year_column" prefWidth="96.0" text="Year" />
+            <TableColumn fx:id="year_column1" prefWidth="96.0" text="Price" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="anchor1" layoutX="51.0" layoutY="257.0" prefHeight="423.0" prefWidth="561.0" visible="false">
+         <children>
+            <Button fx:id="add_button" cancelButton="true" layoutX="306.0" layoutY="79.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="226.0" text="Add " />
+            <Label fx:id="description_label" layoutX="33.0" layoutY="134.0" minHeight="16" minWidth="69" prefHeight="26.0" prefWidth="83.0" text="Description :" />
+            <Label fx:id="title_label" layoutX="68.0" layoutY="2.0" prefHeight="25.0" prefWidth="42.0" text="title : " />
+            <TextField fx:id="title_field" layoutX="119.0" layoutY="1.0" prefHeight="26.0" prefWidth="152.0" />
+            <TextField fx:id="categorie_field" layoutX="120.0" layoutY="45.0" />
+            <Label fx:id="categorie_label" layoutX="58.0" layoutY="49.0" text="category:" />
+            <Label fx:id="city_label" layoutX="74.0" layoutY="88.0" text="City :" />
+            <ComboBox fx:id="city_combo" editable="true" layoutX="119.0" layoutY="84.0" prefHeight="25.0" prefWidth="152.0" promptText="Select  a Choice" />
+            <TextArea fx:id="description_area" layoutX="120.0" layoutY="127.0" prefHeight="47.0" prefWidth="152.0" />
+            <TextField fx:id="price_field" layoutX="120.0" layoutY="190.0" prefHeight="28.0" prefWidth="152.0" />
+            <Label fx:id="price_label" layoutX="54.0" layoutY="201.0" prefHeight="18.0" prefWidth="42.0" text="Price :" />
+            <Label fx:id="type_label" layoutX="53.0" layoutY="242.0" prefHeight="25.0" prefWidth="42.0" text="Type :" />
+            <Label fx:id="year_label" layoutX="59.0" layoutY="303.0" text="Year :" />
+            <Label fx:id="Adresse_label" layoutX="53.0" layoutY="337.0" text="Date" />
+            <Label fx:id="phone_label1" layoutX="337.0" layoutY="49.0" />
+            <TextField fx:id="year_field" layoutX="120.0" layoutY="290.0" prefHeight="26.0" prefWidth="157.0" />
+            <ComboBox fx:id="type_combo" editable="true" layoutX="120.0" layoutY="237.0" prefHeight="35.0" prefWidth="157.0" promptText="Select a choice" />
+            <Label fx:id="fichetech_label" layoutX="306.0" layoutY="27.0" prefHeight="25.0" prefWidth="126.0" text="Technical sheet" />
+            <RadioButton fx:id="show_radio" layoutX="404.0" layoutY="27.0" mnemonicParsing="false" onAction="#togglebutton" prefHeight="25.0" prefWidth="76.0" text="Show" />
+            <DatePicker fx:id="date_picker" layoutX="121.0" layoutY="333.0" onAction="#clicked" prefHeight="25.0" prefWidth="157.0" />
+            <Label fx:id="Region_label" layoutX="46.0" layoutY="377.0" text="Region :" />
+            <TextField fx:id="Region_Field" layoutX="120.0" layoutY="373.0" prefHeight="25.0" prefWidth="157.0" />
+            <JFXButton fx:id="updateaction" layoutX="349.0" layoutY="115.0" onAction="#onupdateaction" opacity="0.56" prefHeight="34.0" prefWidth="150.0" text="update" textFill="#940808" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchore2" layoutX="36.0" layoutY="272.0" prefHeight="385.0" prefWidth="624.0" visible="false">
+         <children>
+            <TextField layoutX="164.0" layoutY="12.0" visible="false" />
+            <Label fx:id="place_label" layoutX="15.0" layoutY="5.0" text="Number Of Places" />
+            <Label fx:id="door_label" layoutX="16.0" layoutY="35.0" text="Number of car doors" />
+            <TextField layoutX="164.0" layoutY="57.0" visible="false" />
+            <Label fx:id="fuel_label" layoutX="17.0" layoutY="76.0" text="Fuel" />
+            <Label fx:id="cylinder_label" layoutX="13.0" layoutY="113.0" text="number of cylinder" />
+            <Label fx:id="power_label" layoutX="21.0" layoutY="149.0" text="Power :" />
+            <Label fx:id="consuption_label" layoutX="18.0" layoutY="251.0" text="Mixed Consumption" />
+            <Label fx:id="speed_label" layoutX="16.0" layoutY="196.0" text="Maximum Speed" />
+            <Label fx:id="performance_label" layoutX="17.0" layoutY="292.0" text="Performance" />
+            <Label fx:id="connectivity_label" layoutX="15.0" layoutY="337.0" text="Connectivity :" />
+            <Label fx:id="adress_label" layoutX="328.0" layoutY="61.0" text="Address :" />
+            <Label fx:id="phone_label" layoutX="322.0" layoutY="99.0" text="Phone number" />
+            <TextField fx:id="place_field" layoutX="164.0" layoutY="1.0" />
+            <TextField fx:id="door_field" layoutX="164.0" layoutY="31.0" />
+            <ComboBox fx:id="combo_fuel" layoutX="165.0" layoutY="71.0" prefWidth="150.0" />
+            <TextField fx:id="cylinder_field" layoutX="166.0" layoutY="109.0" />
+            <TextField fx:id="power_field" layoutX="166.0" layoutY="145.0" />
+            <TextField fx:id="speed_field" layoutX="168.0" layoutY="192.0" />
+            <TextField fx:id="consuption_field" layoutX="168.0" layoutY="247.0" />
+            <TextField fx:id="performance_field" layoutX="168.0" layoutY="288.0" />
+            <CheckBox fx:id="check_box" layoutX="175.0" layoutY="346.0" mnemonicParsing="false" />
+            <TextField fx:id="adress_field" layoutX="467.0" layoutY="57.0" />
+            <TextField fx:id="phone_field" layoutX="467.0" layoutY="95.0" />
+            <JFXButton fx:id="finish_butt" layoutX="441.0" layoutY="205.0" onAction="#onfinishbutt" opacity="0.56" prefHeight="34.0" prefWidth="129.0" text="Finish" textFill="#940808">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="milage_label" layoutX="353.0" layoutY="141.0" text="Milage" />
+            <TextField fx:id="milage_field" layoutX="467.0" layoutY="137.0" />
+            <Label fx:id="date_label" layoutX="332.0" layoutY="178.0" text="Date of circulation : " />
+            <DatePicker fx:id="date_choice" layoutX="469.0" layoutY="174.0" prefHeight="25.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchor3" layoutX="35.0" layoutY="308.0" prefHeight="117.0" prefWidth="211.0" visible="false">
+         <children>
+            <Label fx:id="adress_label1" layoutX="30.0" layoutY="39.0" text="Address :" />
+            <Label fx:id="phone_label2" layoutX="15.0" layoutY="83.0" text="Phone number" />
+            <TextField fx:id="adress_field1" layoutX="94.0" layoutY="35.0" />
+            <TextField fx:id="phone_field1" layoutX="94.0" layoutY="79.0" />
+            <JFXButton fx:id="finish2" layoutX="87.0" layoutY="161.0" onAction="#onfinishbutt" opacity="0.56" prefHeight="25.0" prefWidth="105.0" text="Finish" textFill="#940808">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="load_rental" layoutX="67.0" layoutY="127.0" onAction="#load_butt" opacity="0.56" prefHeight="28.0" prefWidth="145.0" text="load rental contract" textFill="#940808">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="updateAnn" layoutX="304.0" layoutY="229.0" onAction="#onupdate" opacity="0.56" prefHeight="34.0" prefWidth="145.0" text="Update Annoucment" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="removeAnn" layoutX="462.0" layoutY="229.0" onAction="#onRemoveAnn" opacity="0.56" prefHeight="34.0" prefWidth="150.0" text=" Remove Annoucment" textFill="#940808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="35.0" layoutY="77.0" onAction="#home" prefHeight="25.0" prefWidth="101.0" text="Home" textFill="#790808" />
+      <ImageView fitHeight="66.0" fitWidth="25.0" layoutX="39.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/téléchargement%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

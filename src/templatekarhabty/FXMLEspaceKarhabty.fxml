@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="954.0" stylesheets="@../../../Integration/TemplateKARHABTYNJARREBnoumrou0/src/templatekarhabty/style.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.FXMLEspaceKarhabtyController">
+   <children>
+      <ImageView fitHeight="729.0" fitWidth="1086.0" layoutX="-31.0" layoutY="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="fond" fitHeight="715.0" fitWidth="1050.0" layoutX="8.0" layoutY="-11.0" opacity="0.29" pickOnBounds="true" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="-11.0">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pic" fitHeight="87.0" fitWidth="115.0" layoutX="935.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="profilepic">
+         <image>
+            <Image url="@../icons/avatar-159236_640.png" />
+         </image>
+      </ImageView>
+      <JFXTabPane fx:id="faza" layoutX="4.0" layoutY="190.0" prefHeight="534.0" prefWidth="1049.0">
+         <tabs>
+            <Tab text="Show and Update">
+               <content>
+                  <AnchorPane fx:id="AnchorKarhabty" prefHeight="458.0" prefWidth="904.0">
+                     <children>
+                        <Label layoutX="355.0" layoutY="186.0" prefHeight="32.0" prefWidth="146.0" />
+                        <Label layoutX="14.0" layoutY="28.0" opacity="0.35" text="My Car Space ">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.6066666073269313" centerY="0.43893129770992356" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#8f1313" offset="0.9992366412213738" />
+                                    <Stop color="#8f1313" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <JFXButton layoutX="633.0" layoutY="303.0" onAction="#EditCar" text="Confirm Editing">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Integration/TemplateKARHABTYNJARREBnoumrou0/src/icons/Confirm-512.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <GridPane layoutX="159.0" layoutY="85.0" prefHeight="218.0" prefWidth="473.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Marque" />
+                              <Label text="Matricule" GridPane.rowIndex="1" />
+                              <Label text="Mise en circulation " GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="setMarque" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="setMatricule" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXDatePicker fx:id="set_mc" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Label fx:id="labelAlerteEdit" layoutX="22.0" layoutY="307.0" prefHeight="87.0" prefWidth="329.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="57.0" opacity="0.52" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/edit-button-image-68871.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab onSelectionChanged="#RemindersCar" text="Reminders">
+               <content>
+                  <AnchorPane id="AnchorPane" fx:id="AnchorRappels" prefHeight="490.0" prefWidth="902.0">
+                     <children>
+                        <Label layoutX="91.0" layoutY="194.0" prefHeight="26.0" prefWidth="90.0" text="Date vignette :" />
+                        <Label layoutX="95.0" layoutY="104.0" prefHeight="18.0" prefWidth="82.0" text="Date visite :" />
+                        <Label layoutX="95.0" layoutY="150.0" text="Assurance :" />
+                        <Label layoutX="95.0" layoutY="248.0" prefHeight="18.0" prefWidth="82.0" text="Vidange :" />
+                        <JFXDatePicker fx:id="dp_visite1" layoutX="252.0" layoutY="85.0" />
+                        <JFXDatePicker fx:id="dp_vidange1" layoutX="252.0" layoutY="229.0" />
+                        <JFXDatePicker fx:id="dp_vignette1" layoutX="254.0" layoutY="179.0" />
+                        <JFXDatePicker fx:id="dp_assurance1" layoutX="252.0" layoutY="131.0" />
+                        <Label layoutX="13.0" layoutY="20.0" opacity="0.52" text="My Reminders">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.6066666073269313" centerY="0.43893129770992356" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#8f1313" offset="0.9992366412213738" />
+                                    <Stop color="#8f1313" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <JFXButton layoutX="528.0" layoutY="291.0" onAction="#ReminderEdit" text="Confirm Editing">
+                           <graphic>
+                              <ImageView fitHeight="57.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/Confirm-512.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Label fx:id="labelAlerteReminders" layoutX="91.0" layoutY="332.0" prefHeight="71.0" prefWidth="320.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="47.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Microsoft-Reminders-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Notes">
+               <content>
+                  <AnchorPane fx:id="AnchorNote" prefHeight="440.0" prefWidth="212.0">
+                     <children>
+                        <TableView fx:id="NotesList" layoutX="51.0" layoutY="82.0" onMouseClicked="#NotesTableClicked" prefHeight="246.0" prefWidth="150.0">
+                           <columns>
+                              <TableColumn fx:id="sub_column" prefWidth="75.0" text="Subject" />
+                           </columns>
+                        </TableView>
+                        <JFXButton fx:id="addNote" layoutX="137.0" layoutY="43.0" onAction="#addNote" ripplerFill="#ca7f70" text="Add new" />
+                        <AnchorPane fx:id="AnchorEditNote" layoutX="270.0" layoutY="56.0" prefHeight="283.0" prefWidth="374.0" visible="false">
+                           <children>
+                              <Label layoutX="12.0" layoutY="33.0" text="Date : " />
+                              <Label layoutX="14.0" layoutY="65.0" prefHeight="18.0" prefWidth="50.0" text="Subject :" />
+                              <Label layoutX="15.0" layoutY="104.0" text="Content :" />
+                              <JFXDatePicker fx:id="dp_note" defaultColor="#86aae2" layoutX="85.0" layoutY="14.0" />
+                              <JFXTextField fx:id="sub_note" layoutX="85.0" layoutY="52.0" />
+                              <JFXTextArea fx:id="content_note" layoutX="79.0" layoutY="104.0" prefHeight="94.0" prefWidth="218.0" />
+                              <JFXButton fx:id="EditNote" layoutX="180.0" layoutY="235.0" ripplerFill="#7babf8" text="Edit Note" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AnchorShowNote" layoutX="302.0" layoutY="38.0" prefHeight="283.0" prefWidth="328.0" visible="false">
+                           <children>
+                              <Label layoutX="12.0" layoutY="33.0" text="Date : " />
+                              <Label layoutX="14.0" layoutY="65.0" prefHeight="18.0" prefWidth="50.0" text="Subject :" />
+                              <Label layoutX="15.0" layoutY="104.0" text="Content :" />
+                              <JFXDatePicker fx:id="dp_note1" defaultColor="#86aae2" layoutX="85.0" layoutY="14.0" />
+                              <JFXTextField fx:id="sub_note1" layoutX="85.0" layoutY="52.0" />
+                              <JFXTextArea fx:id="content_note1" layoutX="79.0" layoutY="104.0" prefHeight="94.0" prefWidth="218.0" />
+                              <JFXButton fx:id="ConfirmAddNote" layoutX="180.0" layoutY="235.0" onAction="#ConfirmAddNote" ripplerFill="#7babf8" text="Add" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="27.0" layoutY="20.0" opacity="0.48" text="My Notes">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <textFill>
+                              <RadialGradient centerX="0.6066666073269313" centerY="0.43893129770992356" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#8f1313" offset="0.9992366412213738" />
+                                    <Stop color="#8f1313" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="LabelAlerteNote" layoutX="84.0" layoutY="359.0" prefHeight="71.0" prefWidth="341.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="28.0" opacity="0.69" pickOnBounds="true">
+                     <image>
+                        <Image url="@../icons/images%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab onSelectionChanged="#ExpensesCar" text="Expenses">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="AnchorDepense" layoutX="20.0" layoutY="11.0" prefHeight="337.0" prefWidth="328.0">
+                           <children>
+                              <TableView fx:id="tableDepense" layoutX="16.0" layoutY="57.0" prefHeight="270.0" prefWidth="295.0">
+                                 <columns>
+                                    <TableColumn fx:id="type_dep" prefWidth="89.60003662109375" text="Type" />
+                                    <TableColumn fx:id="cost_dep" prefWidth="83.199951171875" text="cost(DT)" />
+                                    <TableColumn fx:id="date_dep" prefWidth="120.79997558593749" text="Date" />
+                                 </columns>
+                              </TableView>
+                              <JFXButton layoutX="224.0" layoutY="14.0" onAction="#AddExpenses" ripplerFill="#9c3636" text="Add expenses" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AnchorAddExpenses" layoutX="359.0" layoutY="54.0" prefHeight="290.0" prefWidth="295.0" visible="false">
+                           <children>
+                              <JFXTextField fx:id="tf_cout" layoutX="86.0" layoutY="98.0" prefHeight="26.0" prefWidth="103.0" />
+                              <JFXComboBox fx:id="combobox" layoutX="86.0" layoutY="41.0" onAction="#setDepenseType" prefHeight="30.0" prefWidth="135.0" />
+                              <Label layoutX="191.0" layoutY="107.0" prefHeight="26.0" prefWidth="20.0" text="DT" />
+                              <Label layoutX="26.0" layoutY="63.0" text="Type :" />
+                              <Label layoutX="28.0" layoutY="112.0" text="Coast :" />
+                              <JFXDatePicker fx:id="dp_dep" layoutX="94.0" layoutY="160.0" prefHeight="28.0" prefWidth="135.0" />
+                              <Label layoutX="30.0" layoutY="174.0" text="Date :" />
+                              <Label layoutX="92.0" layoutY="14.0" prefHeight="26.0" prefWidth="103.0" text="Add a cost" textFill="#b56666">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton layoutX="136.0" layoutY="228.0" onAction="#confirmAdd_dep" text="Confirm" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="labelAlerteExpenses" layoutX="39.0" layoutY="354.0" prefHeight="71.0" prefWidth="293.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="35.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/240_F_116499398_HdQiZjmQVbw3qJs5PwmttBuAxoIyRq7Y.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Statistics">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="AnchorStat" layoutX="14.0" layoutY="14.0" prefHeight="487.0" prefWidth="1031.0">
+                           <children>
+                              <JFXToggleButton fx:id="showStats" onAction="#showStats" text="This Car" />
+                              <PieChart fx:id="myPieChart" layoutX="371.0" layoutY="127.0" legendSide="TOP" prefHeight="282.0" prefWidth="402.0" titleSide="RIGHT" visible="false" />
+                              <LineChart fx:id="myLineChart" animated="false" layoutX="25.0" layoutY="150.0" prefHeight="278.0" prefWidth="447.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </LineChart>
+                              <BarChart fx:id="myBarChart" animated="false" layoutX="103.0" layoutY="105.0" prefHeight="346.0" prefWidth="577.0" visible="false">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </BarChart>
+                              <JFXToggleButton fx:id="StatAll" layoutX="142.0" onAction="#StatAll" text="All My Cars" />
+                              <GridPane layoutX="413.0" layoutY="14.0" prefHeight="42.0" prefWidth="246.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Total : ">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="DT" GridPane.columnIndex="2" />
+                                    <Label fx:id="LabelTotal" prefHeight="30.0" prefWidth="76.0" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="38.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/31369651-Graph-chart-sign-icon-Diagram-symbol-Statistics-Circle-flat-button-with-shadow-Modern-UI-website-nav-Stock-Vector.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab onSelectionChanged="#RemoveCar" text="Remove">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/010_trash-2-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab onSelectionChanged="#BackMenu" text="Back">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/green-back-button-icon-65921.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Label fx:id="id" layoutX="14.0" layoutY="198.0" prefHeight="17.0" prefWidth="64.0" visible="false" />
+      <AnchorPane fx:id="MainCarMenu" layoutX="25.0" layoutY="181.0" prefHeight="506.0" prefWidth="874.0" visible="false">
+         <children>
+            <TableView fx:id="treeview1" layoutX="210.0" layoutY="156.0" prefHeight="262.0" prefWidth="419.0">
+               <columns>
+                  <TableColumn fx:id="tv_marque" prefWidth="200.0" text="marque" />
+                  <TableColumn fx:id="tv_matricule" prefWidth="206.39996337890625" text="matricule" />
+               </columns>
+            </TableView>
+            <Label layoutX="608.0" layoutY="14.0" prefHeight="42.0" prefWidth="230.0" text="Choose your car" textFill="#46b79d">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="648.0" layoutY="375.0" mnemonicParsing="false" onAction="#ShowCar" prefHeight="42.0" prefWidth="134.0" style="-fx-background-color: #46b79d;" text="Show me" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Italic" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Play_button_next_stop_music_pause.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="searchfield1" layoutX="664.0" layoutY="75.0" />
+            <JFXButton fx:id="AddCar" buttonType="RAISED" layoutX="20.0" layoutY="19.0" onAction="#AddCar" prefHeight="43.0" prefWidth="162.0" text="Add New">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/add.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AddScene" fx:id="AnchorAdd" layoutX="29.0" layoutY="163.0" prefHeight="522.0" prefWidth="866.0" visible="false">
+         <children>
+            <Label fx:id="LabelAlert" layoutX="26.0" layoutY="418.0" prefHeight="71.0" prefWidth="246.0" />
+            <Label layoutX="37.0" layoutY="88.0" prefHeight="38.0" prefWidth="162.0" text="Add Your Car" textFill="#ed4566bf">
+               <font>
+                  <Font name="Bernard MT Condensed" size="30.0" />
+               </font>
+            </Label>
+            <Separator layoutX="63.0" layoutY="367.0" prefHeight="0.0" prefWidth="778.0" />
+            <GridPane layoutX="200.0" layoutY="156.0" prefHeight="166.0" prefWidth="466.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="label_marque" prefHeight="32.0" prefWidth="95.0" text="* Marque :  " wrapText="true" />
+                  <Label fx:id="label_matricule" prefHeight="30.0" prefWidth="103.0" text="* Matricule" GridPane.rowIndex="1" />
+                  <Label text="* Date de mise en circulation" GridPane.rowIndex="2" />
+                  <JFXDatePicker fx:id="dp_mc" defaultColor="#b2150a" prefHeight="28.0" prefWidth="269.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="tf_marque" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="tf_matricule" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="* Kilometrage actuel" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="tf_klm" prefHeight="18.0" prefWidth="74.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <JFXButton layoutX="505.0" layoutY="382.0" onAction="#ConfirmAdd" prefHeight="47.0" prefWidth="270.0" text="Confirm Add and back to menu" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Confirm-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="158.0" layoutY="382.0" onAction="#ConfirmAdd1" prefHeight="32.0" prefWidth="254.0" text="Confirm Add and check Car Space" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Confirm-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="104.0" layoutY="472.0" prefHeight="18.0" prefWidth="171.0" text="* Fields Requiered" textFill="#d71818" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelUtilisateur" layoutX="749.0" layoutY="42.0" prefHeight="32.0" prefWidth="182.0" />
+      <Label layoutX="850.0" layoutY="14.0" prefHeight="28.0" prefWidth="82.0" text="Hello Mr/Mrs," />
+      <JFXButton layoutX="37.0" layoutY="101.0" onAction="#home" prefHeight="25.0" prefWidth="119.0" text="Home" textFill="#800404" />
+      <ImageView fitHeight="28.0" fitWidth="55.0" layoutX="46.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/téléchargement%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

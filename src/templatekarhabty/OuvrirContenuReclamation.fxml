@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="653.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.OuvrirContenuReclamationController">
+   <children>
+      <ImageView fitHeight="709.0" fitWidth="1054.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="703.0" fitWidth="776.0" layoutX="90.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="174.0" layoutY="335.0" prefHeight="28.0" prefWidth="100.0" text="Subject :" textFill="#900606">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="435.0" prefHeight="28.0" prefWidth="119.0" text="Description :" textFill="#900606">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="174.0" layoutY="282.0" prefHeight="28.0" prefWidth="119.0" text="Client's mail :" textFill="#900606">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="mail" layoutX="350.0" layoutY="282.0" prefHeight="28.0" prefWidth="209.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="sujet" layoutX="333.0" layoutY="335.0" prefHeight="28.0" prefWidth="244.0" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="description" layoutX="333.0" layoutY="435.0" prefHeight="149.0" prefWidth="266.0" wrapText="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="mail" layoutX="768.0" layoutY="613.0" onAction="#gotomail" prefHeight="35.0" prefWidth="89.0" text="Mail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.TestAutoecoleController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1011.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="676.0" fitWidth="777.0" layoutX="90.0" layoutY="-2.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <TableView fx:id="TableQuestion" layoutX="792.0" layoutY="22.0" onMouseClicked="#onclick" prefHeight="256.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="cquestion" prefWidth="198.0" text="Questions :" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="image" fitHeight="400.0" fitWidth="648.0" layoutX="125.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="labelQ" layoutX="125.0" layoutY="468.0" prefHeight="114.0" prefWidth="446.0" wrapText="true">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="valider" layoutX="899.0" layoutY="507.0" onAction="#valider" prefHeight="36.0" prefWidth="83.0" text="Valider" textFill="#970808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ChoiceBox fx:id="rep" layoutX="795.0" layoutY="294.0" prefHeight="26.0" prefWidth="194.0" />
+      <Label layoutX="617.0" layoutY="461.0" prefHeight="114.0" prefWidth="281.0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

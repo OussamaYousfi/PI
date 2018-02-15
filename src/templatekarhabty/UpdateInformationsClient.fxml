@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.UpdateInformationsClientController">
+   <children>
+      <ImageView fitHeight="629.0" fitWidth="942.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="628.0" fitWidth="700.0" layoutX="68.0" layoutY="-2.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <JFXTabPane layoutX="105.0" layoutY="210.0" prefHeight="375.0" prefWidth="631.0">
+         <tabs>
+            <Tab onSelectionChanged="#refresh" text="Update my informations">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="346.0" prefWidth="507.0">
+                     <children>
+                        <JFXTextField fx:id="mail" labelFloat="true" layoutX="108.0" layoutY="36.0" prefHeight="34.0" prefWidth="383.0" promptText="Mail adress" />
+                        <JFXTextField fx:id="tel" labelFloat="true" layoutX="108.0" layoutY="113.0" prefHeight="35.0" prefWidth="382.0" promptText="Phone number" />
+                        <JFXTextField fx:id="adress" labelFloat="true" layoutX="108.0" layoutY="178.0" prefHeight="34.0" prefWidth="379.0" promptText="Full adress" />
+                        <JFXTextField fx:id="numS" labelFloat="true" layoutX="108.0" layoutY="241.0" prefHeight="33.0" prefWidth="381.0" promptText="No Siren" />
+                        <JFXButton layoutX="490.0" layoutY="294.0" onAction="#ConfirmModification" prefHeight="25.0" prefWidth="103.0" text="Record" textFill="#790b0b">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#resetmdp" text="Reset my password">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="216.0" prefWidth="507.0">
+                     <children>
+                        <JFXTextField fx:id="ancienmdp" labelFloat="true" layoutX="98.0" layoutY="60.0" prefHeight="34.0" prefWidth="390.0" promptText="Former password" />
+                        <JFXTextField fx:id="nvmdp" labelFloat="true" layoutX="98.0" layoutY="137.0" prefHeight="33.0" prefWidth="393.0" promptText="New password" />
+                        <JFXTextField fx:id="confnv" labelFloat="true" layoutX="98.0" layoutY="212.0" prefHeight="32.0" prefWidth="399.0" promptText="Confirm password" />
+                        <JFXButton fx:id="hafnewi" layoutX="497.0" layoutY="289.0" onAction="#ModifierPassword" prefHeight="25.0" prefWidth="95.0" text="Record" textFill="#9e0404">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <Label fx:id="erreur" layoutX="213.0" layoutY="286.0" prefHeight="32.0" prefWidth="267.0" text="you have entered non-identical passwords !!!" textFill="#8d0606">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXButton layoutX="134.0" layoutY="90.0" onAction="#home" prefHeight="25.0" prefWidth="98.0" text="Home" textFill="#900707" />
+      <ImageView fitHeight="34.0" fitWidth="27.0" layoutX="134.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/téléchargement%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

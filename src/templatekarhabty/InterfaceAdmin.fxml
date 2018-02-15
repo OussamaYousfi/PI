@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="441.0" prefWidth="751.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.InterfaceAdminController">
+    <children>
+      <ImageView fitHeight="739.0" fitWidth="1105.0" layoutX="-3.0" layoutY="-68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="fond" fitHeight="669.0" fitWidth="751.0" layoutX="-3.0" opacity="0.29" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="351.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="pic" fitHeight="150.0" fitWidth="200.0" layoutX="766.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="profilepic">
+         <image>
+            <Image url="@../icons/avatar-159236_640.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="upload" layoutX="783.0" layoutY="174.0" mnemonicParsing="false" onAction="#upload_pic" opacity="0.51" prefHeight="32.0" prefWidth="134.0" style="-fx-border-radius: 50%;" styleClass="upload" stylesheets="@style.css" text="       upload picture">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startY="0.3619047619047619">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#940808" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <ImageView fitHeight="32.0" fitWidth="29.0" layoutX="786.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icon-camera-128.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="755.0" layoutY="300.0" opacity="0.55" prefHeight="29.0" prefWidth="78.0" text="Frist name :" textFill="#e40606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="762.0" layoutY="354.0" opacity="0.54" text="Last name :" textFill="#e40606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="790.0" layoutY="408.0" opacity="0.55" text="Mail :" textFill="#e40606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="745.0" layoutY="460.0" opacity="0.55" text="Phone number :" textFill="#e40606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="743.0" layoutY="234.0" text="Welcome " textFill="#da1212">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="850.0" layoutY="233.0" prefHeight="32.0" prefWidth="134.0" textFill="#970808">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="874.0" layoutY="305.0" prefHeight="18.0" prefWidth="100.0" />
+      <Label layoutX="884.0" layoutY="353.0" prefHeight="18.0" prefWidth="100.0" />
+      <Label layoutX="863.0" layoutY="398.0" prefHeight="18.0" prefWidth="122.0" />
+      <Label layoutX="863.0" layoutY="459.0" prefHeight="18.0" prefWidth="90.0" />
+      <JFXButton fx:id="bouton" layoutX="63.0" layoutY="233.0" onAction="#manageposts" opacity="0.56" prefHeight="32.0" prefWidth="122.0" ripplerFill="#6ea3e8" text="Manage Posts" textFill="#940808">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="580.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8-message.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="573.0" layoutY="114.0" onAction="#inbox" prefHeight="25.0" prefWidth="108.0" text="Inbox" textFill="#bc1818">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="77.0" layoutY="293.0" onAction="#AllUsers" opacity="0.56" prefHeight="25.0" prefWidth="94.0" text="All Users" textFill="#861b1b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="70.0" layoutY="342.0" onAction="#reclamation" opacity="0.56" prefHeight="25.0" prefWidth="108.0" text="Manage claims" textFill="#861b1b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#disconnect" prefHeight="32.0" prefWidth="134.0" text="Disconnect" textFill="#750404" />
+      <ImageView fitHeight="18.0" fitWidth="25.0" layoutX="28.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/reverse-icon-7.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

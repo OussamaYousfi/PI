@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="631.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.InterfaceActualitéAdminController">
+   <children>
+      <ImageView fitHeight="702.0" fitWidth="1049.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="699.0" fitWidth="774.0" layoutX="136.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <TableView fx:id="table" layoutX="143.0" layoutY="224.0" opacity="0.45" prefHeight="318.0" prefWidth="685.0">
+        <columns>
+          <TableColumn fx:id="about" prefWidth="168.0" text="About post" />
+          <TableColumn fx:id="date" prefWidth="82.0" text="Date of post" />
+            <TableColumn fx:id="name" prefWidth="99.0" text="Event name" />
+            <TableColumn fx:id="edate" prefWidth="103.0" text="Date of event" />
+            <TableColumn fx:id="eplace" prefWidth="109.0" text="Event place" />
+            <TableColumn fx:id="pname" prefWidth="134.0" text="Poster name" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <JFXTextField fx:id="ename" labelFloat="true" layoutX="393.0" layoutY="578.0" prefHeight="25.0" prefWidth="123.0" promptText="Event name" unFocusColor="#8c0e0e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="pev" labelFloat="true" layoutX="727.0" layoutY="576.0" prefHeight="25.0" prefWidth="123.0" promptText="Event place" unFocusColor="#8c0e0e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="txtt" focusColor="#2a48a4" labelFloat="true" layoutX="84.0" layoutY="549.0" prefHeight="54.0" prefWidth="301.0" promptText="About post" unFocusColor="#610606">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextArea>
+      <JFXDatePicker fx:id="dev" defaultColor="#8c0e0e" layoutX="548.0" layoutY="574.0" promptText="Date of event" />
+      <JFXButton fx:id="ajouteractualite" layoutX="832.0" layoutY="472.0" onAction="#AjouterActualite" prefHeight="36.0" prefWidth="88.0" text="Submit" textFill="#790808">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="supprimeractualite" layoutX="850.0" layoutY="421.0" onAction="#supprimerActualite" text="Delete" textFill="#6b0909">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="filterInput" labelFloat="true" layoutX="156.0" layoutY="158.0" maxHeight="35.0" minHeight="35.0" promptText="Search" style="-fx-background-radius: 10; -fx-border-radius: 10;" unFocusColor="#9a0505">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="156.0" layoutY="61.0" onAction="#Home" prefHeight="35.0" prefWidth="112.0" text="Home" textFill="#830606" />
+      <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="168.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/téléchargement%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="598.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.AllUsersController">
+   <children>
+      <ImageView fitHeight="674.0" fitWidth="1053.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="674.0" fitWidth="745.0" layoutX="97.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="liste" layoutX="117.0" layoutY="249.0" onMouseClicked="#removeUser" prefHeight="402.0" prefWidth="711.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID User" />
+          <TableColumn fx:id="type" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="mail" prefWidth="75.0" text="Mail" />
+            <TableColumn fx:id="nom" prefWidth="92.0" text="First name" />
+            <TableColumn fx:id="prenom" prefWidth="83.0" text="Last name" />
+            <TableColumn fx:id="tel" prefWidth="115.0" text="Phone number" />
+            <TableColumn fx:id="cin" prefWidth="102.0" text="CIN" />
+            <TableColumn fx:id="adresse" prefWidth="93.0" text="Adress" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="searchfield" layoutX="594.0" layoutY="214.0" prefHeight="25.0" prefWidth="227.0" promptText="Find User" />
+      <JFXButton layoutX="117.0" layoutY="105.0" onAction="#home" prefHeight="25.0" prefWidth="129.0" text="Disconnect" textFill="#610505" />
+      <ImageView fitHeight="25.0" fitWidth="22.0" layoutX="117.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/reverse-icon-7.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

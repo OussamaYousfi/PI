@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templatekarhabty.InterfaceActualitéController">
+   <children>
+      <ImageView fitHeight="626.0" fitWidth="948.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/523159398.jpg" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="626.0" fitWidth="688.0" layoutX="138.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/22810110_2416155158608625_1708352307_o.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <TableView fx:id="table" layoutX="185.0" layoutY="216.0" onMouseClicked="#showAc" opacity="0.43" prefHeight="358.0" prefWidth="595.0">
+        <columns>
+          <TableColumn fx:id="text" prefWidth="83.0" text="about post" />
+          <TableColumn fx:id="datep" prefWidth="106.0" text="date of post" />
+            <TableColumn fx:id="devent" prefWidth="90.0" text="date of event" />
+            <TableColumn fx:id="pevent" prefWidth="93.0" text="event place" />
+            <TableColumn fx:id="poster_name" prefWidth="94.0" text="Poster name" />
+            <TableColumn fx:id="event" prefWidth="75.0" text="Event name" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="filter" labelFloat="true" layoutX="185.0" layoutY="181.0" promptText="Search" unFocusColor="#940707" />
+      <JFXButton layoutX="201.0" layoutY="89.0" onAction="#home" prefHeight="25.0" prefWidth="111.0" text="Home" textFill="#8a0909" />
+      <ImageView fitHeight="43.0" fitWidth="27.0" layoutX="207.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/téléchargement%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
